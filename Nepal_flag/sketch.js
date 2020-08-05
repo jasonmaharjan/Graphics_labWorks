@@ -10,7 +10,7 @@ function draw() { // Loops infinitely
 function constructFlag(){
   createOutline();
   constructMoon();
-  constructStar(width * 0.28, height * 0.74, 42, 65, 12);
+  constructStar(width * 0.28, height * 0.73, 42, 65, 12);
 }
 
 function createOutline() {
@@ -35,7 +35,7 @@ function constructMoon() {
   fill(220, 20, 60);
   ellipse(width * 0.28, height * (0.3), 130, 110);
 
-  constructStar(width * (0.28), height * (0.370), 25, 41, 12);
+  constructStar(width * (0.28), height * (0.380), 23, 35, 14);
 }
 
 function constructStar(x, y, radius1, radius2, npoints) {
