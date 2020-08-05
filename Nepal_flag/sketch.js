@@ -1,5 +1,15 @@
-function setup() { // onlyOnce
-  createCanvas(500, 500);
+var canvas;
+
+function centerCanvas() {
+  var x = (windowWidth - width) / 2;
+  var y = (windowHeight - height) / 2;
+  canvas.position(x, y);
+  console.log(windowWidth, windowHeight, width, height, x, y);
+}
+
+function setup() { 
+  canvas = createCanvas(500, 500);
+  centerCanvas();
 }
 
 function draw() { // Loops infinitely
@@ -17,12 +27,12 @@ function createOutline() {
   stroke(0, 56, 147);   // Deep Powder Blue
   strokeWeight(15);
   fill(220, 20, 60);    // Crimson Red
-  beginShape();
-  vertex(50, height - 10);
+  beginShape();         // Custom shape(s)
+  vertex(50, height - 15);
   vertex(50, 15);
   vertex(width - 80, height / 2);
   vertex(width * (1 / 3), height / 2);
-  vertex(width - 80, height - 10);
+  vertex(width - 80, height - 15);
   endShape(CLOSE);
 }
 
@@ -45,13 +55,21 @@ function constructStar(x, y, radius1, radius2, npoints) {
   let halfAngle = angle / 2.0;
 
   beginShape();
+  // Polar to Co-ordinate transformation
   for (let a = 0; a < TWO_PI; a += angle) {
     let sx = x + cos(a) * radius2;
     let sy = y + sin(a) * radius2;
+
     vertex(sx, sy);
+
     sx = x + cos(a + halfAngle) * radius1;
     sy = y + sin(a + halfAngle) * radius1;
     vertex(sx, sy);
+  
   }
   endShape(CLOSE);
+}
+
+function windowResized() {
+  centerCanvas();
 }
