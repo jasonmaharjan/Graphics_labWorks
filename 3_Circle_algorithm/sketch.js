@@ -33,7 +33,7 @@ function draw() {
 }
 
 function plotPoints(x,y,center) {    
-  // 8 Quadrant Symmetry Implementation
+  // 8 Point Symmetry Implementation
   var p1 = center.x + x;
   var p2 = center.y + y;
 

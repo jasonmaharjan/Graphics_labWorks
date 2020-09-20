@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Circle Drawing Algorithm</title>
+    <title>Ellipse Drawing Algorithm</title>
     <style>
       body {
         padding: 0;
@@ -21,6 +21,21 @@
       .title {
         font-weight: 100;
       }
+      .options {
+        margin-bottom: 1rem;
+      }
+      .submit {
+        border: 1px solid black;
+        border-radius: 2px;
+        background-color: rgb(3, 153, 23);
+        color: rgb(255, 255, 255);
+        transition: all .3s;
+      }
+      .submit:hover {
+        cursor: pointer;
+        background-color:rgba(3, 153, 23, 0.849);
+        transform: scale(1.01);
+      }
 
     </style>
     <script src="../p5.js"></script>
@@ -31,11 +46,19 @@
   <body>
     <section class = "main">
       <h1 class = "title">
-        Circle Drawing Algorithm
+        Ellipse Drawing Algorithm
       </h1>
-      <div class = "options">
-        Input parameters here
-      </div>
+      <form id = "form" action = "#">
+        <input type = "number" class = "input-radius" placeholder = "Enter radius-x">
+        &nbsp;
+        <input type = "number" class = "input-radius" placeholder = "Enter radius-y">
+        &nbsp;
+        <input type = "number" class = "input-x" placeholder = "Enter x-coordinate">
+        &nbsp;
+        <input type = "number" class = "input-y" placeholder = "Enter y-coordinate">
+        &nbsp;
+        <button class = "submit" onClick = "draw()">Submit</button>
+      </form>
     </section>
   </body>
 
