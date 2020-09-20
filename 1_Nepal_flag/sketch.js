@@ -4,7 +4,7 @@ function centerCanvas() {
   var x = (windowWidth - width) / 2;
   var y = (windowHeight - height) / 2;
   canvas.position(x, y);
-  console.log(windowWidth, windowHeight, width, height, x, y);
+  console.log(windowWidth, windowHeight);
 }
 
 function setup() { 
