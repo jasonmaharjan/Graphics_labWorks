@@ -1,0 +1,22 @@
+{
+  "name": "graphics",
+  "version": "1.0.0",
+  "description": "lab works for comp342",
+  "main": "p5.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonmaharjan/Graphics_labWorks.git"
+  },
+  "author": "Jason",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasonmaharjan/Graphics_labWorks/issues"
+  },
+  "homepage": "https://github.com/jasonmaharjan/Graphics_labWorks#readme",
+  "dependencies": {
+    "mathjs": "^7.2.0"
+  }
+}
