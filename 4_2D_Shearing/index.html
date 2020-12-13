@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Shearing</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family:'Trebuchet MS';
+      }
+
+      .input{
+        width: 8rem;
+      }
+
+      .input-1 {
+        width: 5rem;
+      }
+
+      .title {
+        font-weight: 100;
+      }
+      .options {
+        margin-bottom: 1rem;
+      }
+      .submit {
+        border: 1px solid black;
+        border-radius: 2px;
+        background-color: rgb(4, 109, 4);
+        color: rgb(255, 255, 255);
+        transition: all .2s;
+      }
+      .submit:hover {
+        cursor: pointer;
+        background-color:rgba(3, 153, 23, 0.836);
+        transform: scale(1.01);
+      }
+
+      .transform {
+        border: 1px solid black;
+        border-radius: 2px;
+        background-color: rgba(75, 5, 107, 0.863);
+        color: white;
+        transition: all .2s;
+        height: 1.5rem;
+        width: 5rem;
+        margin: 0rem 1rem 0rem -0.1rem;
+      }
+
+      .transform:hover {
+        cursor: pointer;
+        background-color: rgba(75, 5, 107, 0.712);
+        transform: scale(1.01);
+      }
+
+    </style>
+    <script src="../p5.js"></script>
+    <script src="../addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+
+  <body>
+    <section class = "main">
+      <h1 class = "title">
+        2D Shearing By Homogeneous Coordinates
+      </h1>
+      <form id = "form" action = "#">
+        <input class = "input-1" placeholder = "X-axis">
+        <input class = "input-1" placeholder = "Y-axis">
+        <button class = "transform" onClick = "draw()">Shear</button>
+      </form>
+    </section>
+  </body>
+</html>

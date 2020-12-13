@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cohen Sutherland LCA</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family:'Trebuchet MS';
+      }
+      .input{
+        width: 8rem;
+      }
+      .title {
+        font-weight: 100;
+      }
+      .submit {
+        border: 1px solid black;
+        border-radius: 2px;
+        background-color: rgb(4, 109, 4);
+        color: rgb(255, 255, 255);
+        transition: all .2s;
+      }
+      .submit:hover {
+        cursor: pointer;
+        background-color:rgba(3, 153, 23, 0.836);
+        transform: scale(1.01);
+      }
+    </style>
+    <script src="../p5.js"></script>
+    <script src="../addons/p5.sound.min.js"></script>
+    <script src="sketch.js"></script>
+  </head>
+  <body>
+    <section class = "main">
+      <h1 class = "title">
+        Cohen Sutherland LCA
+      </h1>
+      <form id = "form-1" action = "#">
+        <input type = "number" class = "input" placeholder = "Enter x1">
+        &nbsp;
+        <input type = "number" class = "input" placeholder = "Enter y1">
+        &nbsp;
+        <input type = "number" class = "input" placeholder = "Enter x2">
+        &nbsp;
+        <input type = "number" class = "input" placeholder = "Enter y2">
+        &nbsp;
+        <button class = "submit" onClick = "draw()">Draw Line</button>
+        <button class = "submit" onClick = "draw(1)">Clip Line</button>
+        <br><br>        
+      </form>
+      <div class = "result-div">
+        <span class = "result"></span>
+        <style>
+          .result {
+            color: black;
+          }
+        </style>
+      </div>
+    </section>
+  </body>
+</html>
